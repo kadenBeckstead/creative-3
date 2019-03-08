@@ -7,23 +7,22 @@
       controls
       no-animation
       indicators
-      background="#ababab"
-      :interval="4000"
-      
+      background="#d2d2d2"
+      :interval="1000000"
       v-model="slide"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image" class="slide">
+    
+      <b-carousel-slide class="slide">
         item 1
       </b-carousel-slide>
 
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image" class="slide">
+      <b-carousel-slide class="slide">
         item 2
       </b-carousel-slide>
 
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image" class="slide">
+      <b-carousel-slide class="slide">
         item 3
       </b-carousel-slide>
 
@@ -63,16 +62,20 @@
 
 <style scoped lang="css">
 .carousel {
-  height: 20vh;
+  width: 95vw;
+  height: 80vh !important;
+  overflow: hidden;
 }
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  width: 100%;
-  height: 20vh;
+::v-deep .carousel-inner {
+  height: 100% !important;
 }
 
-.slide {
-  color: black;
+.carousel-item {
+  height: 100% !important;
+}
+
+.carousel-caption {
+  position: initial;
 }
 </style>

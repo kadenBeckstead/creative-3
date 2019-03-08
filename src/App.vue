@@ -3,21 +3,16 @@
     <nav class="nbar navbar navbar-expand-lg navbar-light bg-light">
       <div class="toolbar">
         <a class="navbar-brand">
-          <router-link to="/home"><span class="page-title">Kaden Beckstead</span></router-link>
+          <router-link to="/home">
+            <span class="page-title">Kaden Beckstead</span>
+          </router-link>
         </a>
         <div class="mobile-button">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
       </div>
       <div class="links collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
@@ -242,14 +237,30 @@ footer {
 .small-space {
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 990px) {
+  .toolbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .page-content {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin: 70px 70px 0px 75px;
+    overflow: hidden;
+  }
+}
 </style>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 @Component({
   created() {
-    if (this.$router.currentRoute.path === "/"){
-      this.$router.push("/home")
+    if (this.$router.currentRoute.path === "/") {
+      this.$router.push("/home");
     }
   }
 })
