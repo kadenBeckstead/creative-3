@@ -1,14 +1,14 @@
 <template lang="html">
 
-  <section class="about">
-    <h1>About Me!</h1>
+  <section class="resume">
+    <h1>Resume!</h1>
   </section>
 
 </template>
 
 <script lang="js">
   export default  {
-    name: 'about',
+    name: 'resume',
     props: [],
     mounted() {
 
@@ -28,7 +28,7 @@
 </script>
 
 <style scoped lang="scss">
-  .about {
+  .resume {
 
   }
 </style>
