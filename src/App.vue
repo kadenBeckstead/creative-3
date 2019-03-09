@@ -222,8 +222,8 @@ footer {
 .page-content {
   min-height: calc(100vh - 150px);
   max-height: calc(100vh - 150px);
-  margin: 70px 20px 0px 75px;
-  overflow: auto;
+  margin: 70px 20px 0px 20px;
+  overflow: hidden;
 }
 
 .list-space {

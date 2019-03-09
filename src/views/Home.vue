@@ -1,29 +1,9 @@
 <template>
   <!-- <div>HOME!</div> -->
-  <div>
-    <md-card>
-      <md-card-header>
-        <svg width="0" height="0" class="poly">
-          <clipPath id="clipPolygon">
-            <polygon points="-1 217,429 216,292 -1,0 0"></polygon>
-          </clipPath>
-        </svg>
-        <md-card-header-text>
-          <div class="md-title">Media card</div>
-          <div class="md-subhead">Normal size</div>
-        </md-card-header-text>
-
-        <md-card-media>
-          <img src="../assets/steps.jpg" alt="People">
-        </md-card-media>
-      </md-card-header>
-
-      <md-card-actions>
-        <md-button>Action</md-button>
-        <md-button>Action</md-button>
-      </md-card-actions>
-    </md-card>
-  </div>
+  <md-card class="card">
+    <div class="poly"></div>
+    <img class="photo" src="../assets/steps.jpg">
+  </md-card>
 </template>
 
 <script lang="ts">
@@ -39,8 +19,23 @@ export default class Home extends Vue {}
 </script>
 
 <style scoped lang="css">
-    .poly {
-        background-color: green;
-    }
-
+.photo {
+  height: 65vh;
+  min-height: 300px;
+  width: auto;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(165, 165, 165);
+  height: 65vh;
+  min-height: 300px;
+}
+.poly {
+  height: 65vh;
+  width: 80%;
+  background-color: green;
+  -webkit-clip-path: polygon(0 0, 64% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 0, 75% 0, 100% 100%, 0% 100%);
+}
 </style>
