@@ -17,22 +17,22 @@
       <div class="links collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link page-route">
               <router-link to="/home" active-class="active">Home</router-link>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link page-route">
               <router-link to="/about" active-class="active">About Me</router-link>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link page-route">
               <router-link to="/resume" active-class="active">Resume</router-link>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link">
+            <a class="nav-link page-route">
               <router-link to="/projects" active-class="active">Projects</router-link>
             </a>
           </li>
@@ -68,6 +68,16 @@
   padding: 30px;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: var(--accent) !important;
+}
+
 #nav a {
   font-weight: bold;
   color: #2c3e50;
@@ -94,12 +104,12 @@ body {
   overflow: hidden;
 }
 
-a {
+.page-route {
   color: white !important;
   text-decoration: none !important;
 }
 
-a:hover {
+.page-route:hover {
   color: var(--accent) !important;
 }
 
@@ -201,6 +211,10 @@ footer {
 .links {
   justify-content: flex-end;
   background-color: var(--toolbar);
+}
+
+.nbar {
+  z-index: 1000;
 }
 
 .navbar-light .navbar-nav .nav-link:focus,
